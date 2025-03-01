@@ -1,6 +1,3 @@
-﻿cls
-
-
 Invoke-WebRequest -Uri "https://github.com/ZaikoARG/xxstrings/releases/download/1.0.0/xxstrings64.exe" -OutFile "xxstrings64.exe"
 
 
