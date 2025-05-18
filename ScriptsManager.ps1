@@ -37,6 +37,7 @@ foreach ($index in $indices) {
         try {
             $code = Invoke-RestMethod -Uri $script.Url
             Invoke-Expression $code
+            Read-Host "Нажмите Enter для продолжения..."
         } catch {
             Write-Warning "Ошибка при загрузке или выполнении скрипта '$($script.Name)': $_"
         }
