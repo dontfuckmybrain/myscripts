@@ -14,7 +14,9 @@ $scriptList = @(
     @{ Name = "GetHarddiskVolumes"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/GetHarddiskVolumes.ps1" },
     @{ Name = "RLSignature"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/RLSignature.ps1" },
     @{ Name = "KernelLiveDumper"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/KernelLiveDumper.ps1" },
-    @{ Name = "MinecraftAlts"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/MinecraftAlts.ps1" }
+    @{ Name = "MinecraftAlts"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/MinecraftAlts.ps1" },
+    @{ Name = "ServiceCheck"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/ServiceCheck.ps1" },
+    @{ Name = "DllsCheck"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/Dlls.ps1" }
 )
 
 
