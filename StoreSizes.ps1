@@ -1,0 +1,1 @@
+(gp "HKCU:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Store").psobject.properties|? typenameofvalue -e System.Byte[]|select @{Name='FileSize';Expression={[Convert]::ToInt32((($_.value[23..20]|%{$_.tostring('x')})-join ''),16)}},name|ogv -t "Store Easy"
