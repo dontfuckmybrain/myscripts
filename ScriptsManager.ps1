@@ -11,14 +11,13 @@ Write-Host "╚═════╝░░╚════╝░╚═╝░░╚�
 $scriptList = @(
     @{ Name = "HabibiModAnalyzer"; Url = "https://raw.githubusercontent.com/HadronCollision/PowershellScripts/refs/heads/main/HabibiModAnalyzer.ps1" },
     @{ Name = "TaskSchedulerParser"; Url = "https://raw.githubusercontent.com/ObsessiveBf/Task-Scheduler-Parser/main/script.ps1" },
-    @{ Name = "RLBam"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/RLBam.ps1" },
     @{ Name = "RedLotusPrefetchAnalyzer"; Url = "https://raw.githubusercontent.com/bacanoicua/Screenshare/main/RedLotusPrefetchIntegrityAnalyzer.ps1" },
     @{ Name = "GetHarddiskVolumes"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/GetHarddiskVolumes.ps1" },
-    @{ Name = "RLSignature"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/RLSignature.ps1" },
-    @{ Name = "KernelLiveDumper"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/KernelLiveDumper.ps1" },
-    @{ Name = "MinecraftAlts"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/MinecraftAlts.ps1" },
     @{ Name = "ServiceCheck"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/ServiceCheck.ps1" },
     @{ Name = "DllsCheck"; Url = "https://raw.githubusercontent.com/dontfuckmybrain/myscripts/refs/heads/main/Dlls.ps1" }
+    @{ Name = "ConvertMPLogToCSV"; Url = "https://github.com/dontfuckmybrain/myscripts/raw/refs/heads/main/ConvertMPLogToCSV.ps1" }
+    @{ Name = "DoomsdayFinder"; Url = "https://github.com/dontfuckmybrain/myscripts/raw/refs/heads/main/DoomsdayFinder.ps1" }
+    @{ Name = "RecChecker"; Url = "https://github.com/dontfuckmybrain/myscripts/raw/refs/heads/main/RecChecker.ps1" }
 )
 
 
@@ -45,3 +44,4 @@ foreach ($index in $indices) {
         Write-Warning "Неверный номер скрипта: $($index + 1)"
     }
 }
+
