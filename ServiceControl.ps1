@@ -1,1 +1,0 @@
-get-eventlog -source 'Service Control manager' -logname System | select message, timegenerated, username | out-gridview
