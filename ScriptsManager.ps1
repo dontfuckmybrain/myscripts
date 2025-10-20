@@ -18,6 +18,8 @@ $scriptList = @(
     @{ Name = "ConvertMPLogToCSV"; Url = "https://github.com/dontfuckmybrain/myscripts/raw/refs/heads/main/ConvertMPLogToCSV.ps1" }
     @{ Name = "DoomsdayFinder"; Url = "https://github.com/dontfuckmybrain/myscripts/raw/refs/heads/main/DoomsdayFinder.ps1" }
     @{ Name = "RecChecker"; Url = "https://github.com/dontfuckmybrain/myscripts/raw/refs/heads/main/RecChecker.ps1" }
+    @{ Name = "StoreSizes"; Url = "https://github.com/dontfuckmybrain/myscripts/raw/refs/heads/main/StoreSizes.ps1" }
+    @{ Name = "UserAssist"; Url = "https://github.com/dontfuckmybrain/myscripts/raw/refs/heads/main/UserAssist.ps1" }
 )
 
 
@@ -44,4 +46,5 @@ foreach ($index in $indices) {
         Write-Warning "Неверный номер скрипта: $($index + 1)"
     }
 }
+
 
