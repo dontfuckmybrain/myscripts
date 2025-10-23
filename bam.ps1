@@ -50,10 +50,8 @@ $Bam = Foreach ($Sid in $Users) {
 
                 [PSCustomObject]@{
                     'Time' = $TimeUTC
-                    'Application' = $app
-                    'Signature' = $sig
                     'Path' = $path
-                    'SortDate' = [DateTime]::FromFileTimeUtc([Convert]::ToInt64($Hex, 16))
+                    'Signature' = $sig
                 }
             }
         }
