@@ -13,7 +13,7 @@ $serviceStatus = Get-Service -Name "DPS" -ErrorAction SilentlyContinue
 
 if ($serviceStatus) {
        
-    if ($serviceStatus.Status -eq 'Running') {
+    if ($serviceStatus.Status -eq "Running") {
             
         $serviceProcess = Get-WmiObject Win32_Service | Where-Object { $_.Name -eq "DPS" }
         Write-Host "Service DPS enabled. PID: $($serviceProcess.ProcessId)"
@@ -21,7 +21,7 @@ if ($serviceStatus) {
         $output = (.\xxstrings64.exe -p $($serviceProcess.ProcessId) | Out-String) -split "`n"
         
         foreach($out in $output) {
-               $filter = '^\\device\\harddiskvolume((?!.*\.(exe|dll)).)*\..*$'
+               $filter = "^\\device\\harddiskvolume((?!.*\.(exe|dll)).)*\..*$"
                if ([System.Text.RegularExpressions.Regex]::IsMatch($out, $filter)) {
                     Write-Host "[DPS] Detected modified extension: "$out -ForegroundColor Yellow
                }
@@ -53,7 +53,7 @@ $serviceStatus = Get-Service -Name "DiagTrack" -ErrorAction SilentlyContinue
 
 if ($serviceStatus) {
        
-    if ($serviceStatus.Status -eq 'Running') {
+    if ($serviceStatus.Status -eq "Running") {
             
         $serviceProcess = Get-WmiObject Win32_Service | Where-Object { $_.Name -eq "DiagTrack" }
         Write-Host "Service DiagTrack enabled. PID: $($serviceProcess.ProcessId)"
@@ -61,7 +61,7 @@ if ($serviceStatus) {
         $output = (.\xxstrings64.exe -p $($serviceProcess.ProcessId) | Out-String) -split "`n"
         
         foreach($out in $output) {
-               $filter = '^\\device\\harddiskvolume((?!.*\.(exe|dll)).)*\..*$'
+               $filter = "^\\device\\harddiskvolume((?!.*\.(exe|dll)).)*\..*$"
                if ([System.Text.RegularExpressions.Regex]::IsMatch($out, $filter)) {
                     Write-Host "[DiagTrack] Detected modified extension: "$out -ForegroundColor Yellow
                }
@@ -103,7 +103,7 @@ foreach($out in $output) {
                 $signature = Get-AuthenticodeSignature $path
 
                 if ($path -notin $array) {
-                       if ($signature.Status -ne 'Valid') {
+                       if ($signature.Status -ne "Valid") {
                             Write-Host "[Explorer] Detected .exe with invalid signature: "$path -ForegroundColor Yellow
                             $array += $path
                        } else {
@@ -114,9 +114,7 @@ foreach($out in $output) {
                 
             } else {
                 Write-Host "[Explorer] Detected deleted .exe: "$path -ForegroundColor DarkYellow
-            }
-            
-                    
+            }       
         }
 }
 
@@ -129,7 +127,7 @@ $serviceStatus = Get-Service -Name "PcaSvc" -ErrorAction SilentlyContinue
 
 if ($serviceStatus) {
        
-    if ($serviceStatus.Status -eq 'Running') {
+    if ($serviceStatus.Status -eq "Running") {
             
         $serviceProcess = Get-WmiObject Win32_Service | Where-Object { $_.Name -eq "PcaSvc" }
         Write-Host "Service PcaSvc enabled. PID: $($serviceProcess.ProcessId)"
@@ -146,7 +144,7 @@ if ($serviceStatus) {
                         $signature = Get-AuthenticodeSignature $path
             
                         if ($path -notin $array) {
-                              if ($signature.Status -ne 'Valid') {
+                              if ($signature.Status -ne "Valid") {
                                    Write-Host "[PCA] Detected .exe with invalid signature: "$path -ForegroundColor Yellow
                                    $array += $path
                               } else {
@@ -181,3 +179,4 @@ if ($serviceStatus) {
 }
 
 Remove-Item -Path "xxstrings64.exe" -Force
+
